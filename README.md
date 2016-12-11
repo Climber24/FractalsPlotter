@@ -7,7 +7,9 @@ Recursive implementation of a fractal drawing is preferred.
 Отдается предпочтение рекурсивной реализации рисования фрактала.
 
 ![Koch curve fractal](https://github.com/LaHesis/FractalsPlotter/raw/master/FractalsPlotterKoch4n.png)
+
 Koch curve fractal, four iteration
 
 ![Koch curve fractal](https://github.com/LaHesis/FractalsPlotter/raw/master/FractalsPlotterKoch5n.png)
+
 Koch curve fractal, five iteration
