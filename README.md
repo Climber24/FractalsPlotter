@@ -6,10 +6,20 @@ Recursive implementation of a fractal drawing is preferred.
 Приложение для генерации разнообазных геометрических фракталов, которое использует графическую библиотеку C# Turtle и Windows Forms.
 Отдается предпочтение рекурсивной реализации рисования фрактала.
 
-![Koch curve fractal](https://github.com/LaHesis/FractalsPlotter/raw/master/FractalsPlotterKoch4n.png)
+![Koch curve fractal](https://github.com/LaHesis/FractalsPlotter/raw/master/Screenshots/FractalsPlotterKoch4n.png)
 
 Koch curve fractal, four iteration
 
-![Koch curve fractal](https://github.com/LaHesis/FractalsPlotter/raw/master/FractalsPlotterKoch5n.png)
+Кривая Коха, четыре итерации
 
-Koch curve fractal, five iteration
+![Koch curve fractal](https://github.com/LaHesis/FractalsPlotter/raw/master/Screenshots/FractalsPlotterKoch5n.png)
+
+Koch curve, five iteration
+
+Кривая Коха, пять итераций
+
+![Koch curve fractal](https://github.com/LaHesis/FractalsPlotter/raw/master/Screenshots/FractalsPlotterKochSnowFlake3n.png)
+
+Koch snowflake, three iteration
+
+Снежинка Коха, три итерации
