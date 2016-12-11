@@ -30,7 +30,6 @@
         {
             this.pnCanvas = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.сBoxFractalChoise = new System.Windows.Forms.ComboBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.barIteration = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,6 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.barThickness = new System.Windows.Forms.TrackBar();
             this.label5 = new System.Windows.Forms.Label();
+            this.comboBoxFractalChoice = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.barIteration)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barFractalHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barSpeed)).BeginInit();
@@ -65,17 +65,6 @@
             this.button1.Text = "Построить выбранный фрактал";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.DrawFractal_Click);
-            // 
-            // сBoxFractalChoise
-            // 
-            this.сBoxFractalChoise.FormattingEnabled = true;
-            this.сBoxFractalChoise.Items.AddRange(new object[] {
-            "Кривая Коха",
-            "Снежинка Коха"});
-            this.сBoxFractalChoise.Location = new System.Drawing.Point(16, 26);
-            this.сBoxFractalChoise.Name = "сBoxFractalChoise";
-            this.сBoxFractalChoise.Size = new System.Drawing.Size(169, 21);
-            this.сBoxFractalChoise.TabIndex = 3;
             // 
             // progressBar1
             // 
@@ -123,7 +112,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(160, 13);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Длина фрактала (в пикселах):";
+            this.label2.Text = "Длина фрактала (в пикселях):";
             // 
             // label3
             // 
@@ -174,11 +163,24 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Толщина линии:";
             // 
+            // comboBoxFractalChoice
+            // 
+            this.comboBoxFractalChoice.FormattingEnabled = true;
+            this.comboBoxFractalChoice.Items.AddRange(new object[] {
+            "Кривая Коха",
+            "Снежинка Коха"});
+            this.comboBoxFractalChoice.Location = new System.Drawing.Point(10, 26);
+            this.comboBoxFractalChoice.Name = "comboBoxFractalChoice";
+            this.comboBoxFractalChoice.Size = new System.Drawing.Size(182, 21);
+            this.comboBoxFractalChoice.TabIndex = 7;
+            this.comboBoxFractalChoice.Text = "Кривая Коха";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(718, 520);
+            this.Controls.Add(this.comboBoxFractalChoice);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -191,9 +193,8 @@
             this.Controls.Add(this.barThickness);
             this.Controls.Add(this.barSpeed);
             this.Controls.Add(this.barFractalHeight);
-            this.Controls.Add(this.сBoxFractalChoise);
             this.Name = "Form1";
-            this.Text = "FractalsPlotter v.0.1.5";
+            this.Text = "FractalsPlotter v.0.2";
             ((System.ComponentModel.ISupportInitialize)(this.barIteration)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barFractalHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barSpeed)).EndInit();
@@ -207,7 +208,6 @@
 
         private System.Windows.Forms.Panel pnCanvas;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox сBoxFractalChoise;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.TrackBar barIteration;
         private System.Windows.Forms.Label label1;
@@ -218,6 +218,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TrackBar barThickness;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBoxFractalChoice;
     }
 }
 

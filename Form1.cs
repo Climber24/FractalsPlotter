@@ -32,10 +32,23 @@ namespace FractalsPlotter
         {
             InitTurtle();
             segment = barFractalHeight.Value / (segmentsLength(barIteration.Value));
-            DrawSnowflake(barIteration.Value);
-            Turtle.Rotate(90);
+            if (comboBoxFractalChoice.Text == "Кривая Коха")
+            {
+                InitTurtleKochCurve();
+                DrawKochCurve(barIteration.Value);
+            }
+            if (comboBoxFractalChoice.Text == "Снежинка Коха")
+            {
+                segment /= 2;
+                InitTurtleKochSnowFlake();
+                DrawKochSnowFlake(barIteration.Value);
+            }
         }
         
+
+
+
+
         public void InitTurtle()
         {
             Turtle.Delay = 1100 / barSpeed.Value;
@@ -44,16 +57,34 @@ namespace FractalsPlotter
             Turtle.ShowTurtle = false;
             Turtle.PenSize = barThickness.Value;
             Turtle.PenUp();
-            Turtle.MoveTo(-pnCanvas.Size.Height / 2, 0);
-            Turtle.Rotate(90);
+            // Turtle will look to the right
         }
 
-        public void DrawSnowflake(int n)
+        public void InitTurtleKochSnowFlake()
         {
+            Turtle.MoveTo(-barFractalHeight.Value / 4, -barFractalHeight.Value / 4);
             Turtle.PenDown();
+        }
+
+        public void InitTurtleKochCurve()
+        {
+            Turtle.MoveTo(-barFractalHeight.Value / 2, 0);
+            Turtle.Rotate(90);
+            Turtle.PenDown();
+        }
+
+        public void DrawKochCurve(int n)
+        {
             snowflakeOneSide(n);
-            //Turtle.Rotate(120);
-            //snowflakeOneSide(n);
+        }
+
+        public void DrawKochSnowFlake(int n)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                snowflakeOneSide(n);
+                Turtle.Rotate(90);
+            }
         }
 
         void snowflakeOneSide(int n)
