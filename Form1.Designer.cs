@@ -28,115 +28,196 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.pnKoch = new System.Windows.Forms.Panel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.toolStripDelayTxtBox = new System.Windows.Forms.ToolStripTextBox();
-            this.pnKoch.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.pnCanvas = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.сBoxFractalChoise = new System.Windows.Forms.ComboBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.barIteration = new System.Windows.Forms.TrackBar();
+            this.label1 = new System.Windows.Forms.Label();
+            this.barFractalHeight = new System.Windows.Forms.TrackBar();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.barSpeed = new System.Windows.Forms.TrackBar();
+            this.label4 = new System.Windows.Forms.Label();
+            this.barThickness = new System.Windows.Forms.TrackBar();
+            this.label5 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.barIteration)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barFractalHeight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barSpeed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barThickness)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnKoch
+            // pnCanvas
             // 
-            this.pnKoch.Controls.Add(this.toolStrip1);
-            this.pnKoch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnKoch.Location = new System.Drawing.Point(3, 3);
-            this.pnKoch.Name = "pnKoch";
-            this.pnKoch.Size = new System.Drawing.Size(845, 414);
-            this.pnKoch.TabIndex = 1;
+            this.pnCanvas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnCanvas.Location = new System.Drawing.Point(207, 12);
+            this.pnCanvas.Name = "pnCanvas";
+            this.pnCanvas.Size = new System.Drawing.Size(500, 500);
+            this.pnCanvas.TabIndex = 1;
             // 
-            // toolStrip1
+            // button1
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripDelayTxtBox});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(845, 25);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(5, 448);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(191, 34);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Построить выбранный фрактал";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.DrawFractal_Click);
             // 
-            // toolStripButton1
+            // сBoxFractalChoise
             // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(114, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.сBoxFractalChoise.FormattingEnabled = true;
+            this.сBoxFractalChoise.Items.AddRange(new object[] {
+            "Кривая Коха",
+            "Снежинка Коха"});
+            this.сBoxFractalChoise.Location = new System.Drawing.Point(16, 26);
+            this.сBoxFractalChoise.Name = "сBoxFractalChoise";
+            this.сBoxFractalChoise.Size = new System.Drawing.Size(169, 21);
+            this.сBoxFractalChoise.TabIndex = 3;
             // 
-            // tabControl1
+            // progressBar1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.HotTrack = true;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(859, 446);
-            this.tabControl1.TabIndex = 2;
+            this.progressBar1.Location = new System.Drawing.Point(5, 488);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(190, 23);
+            this.progressBar1.TabIndex = 4;
             // 
-            // tabPage1
+            // barIteration
             // 
-            this.tabPage1.Controls.Add(this.pnKoch);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(851, 420);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.barIteration.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.barIteration.Location = new System.Drawing.Point(5, 76);
+            this.barIteration.Minimum = 1;
+            this.barIteration.Name = "barIteration";
+            this.barIteration.Size = new System.Drawing.Size(190, 45);
+            this.barIteration.TabIndex = 5;
+            this.barIteration.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.barIteration.Value = 1;
             // 
-            // tabPage2
+            // label1
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(851, 420);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Выберите количество итераций:";
             // 
-            // toolStripDelayTxtBox
+            // barFractalHeight
             // 
-            this.toolStripDelayTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.toolStripDelayTxtBox.Name = "toolStripDelayTxtBox";
-            this.toolStripDelayTxtBox.Size = new System.Drawing.Size(100, 25);
-            this.toolStripDelayTxtBox.Text = "Задержка";
+            this.barFractalHeight.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.barFractalHeight.Location = new System.Drawing.Point(2, 378);
+            this.barFractalHeight.Maximum = 500;
+            this.barFractalHeight.Minimum = 1;
+            this.barFractalHeight.Name = "barFractalHeight";
+            this.barFractalHeight.Size = new System.Drawing.Size(190, 45);
+            this.barFractalHeight.TabIndex = 5;
+            this.barFractalHeight.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.barFractalHeight.Value = 500;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 362);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(160, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Длина фрактала (в пикселах):";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(186, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Выберите фрактал для построения";
+            // 
+            // barSpeed
+            // 
+            this.barSpeed.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.barSpeed.Location = new System.Drawing.Point(5, 255);
+            this.barSpeed.Maximum = 2000;
+            this.barSpeed.Minimum = 1;
+            this.barSpeed.Name = "barSpeed";
+            this.barSpeed.Size = new System.Drawing.Size(190, 45);
+            this.barSpeed.TabIndex = 5;
+            this.barSpeed.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.barSpeed.Value = 20;
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(16, 242);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(168, 19);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Скорость построения:";
+            // 
+            // barThickness
+            // 
+            this.barThickness.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.barThickness.Location = new System.Drawing.Point(6, 161);
+            this.barThickness.Maximum = 50;
+            this.barThickness.Minimum = 1;
+            this.barThickness.Name = "barThickness";
+            this.barThickness.Size = new System.Drawing.Size(190, 45);
+            this.barThickness.TabIndex = 5;
+            this.barThickness.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.barThickness.Value = 1;
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(17, 148);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(168, 19);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Толщина линии:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 446);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(718, 520);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pnCanvas);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.barIteration);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.barThickness);
+            this.Controls.Add(this.barSpeed);
+            this.Controls.Add(this.barFractalHeight);
+            this.Controls.Add(this.сBoxFractalChoise);
             this.Name = "Form1";
-            this.Text = "Form1";
-            this.pnKoch.ResumeLayout(false);
-            this.pnKoch.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.Text = "FractalsPlotter v.0.1.5";
+            ((System.ComponentModel.ISupportInitialize)(this.barIteration)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barFractalHeight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barSpeed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barThickness)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel pnKoch;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripTextBox toolStripDelayTxtBox;
+
+        private System.Windows.Forms.Panel pnCanvas;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox сBoxFractalChoise;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.TrackBar barIteration;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TrackBar barFractalHeight;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TrackBar barSpeed;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TrackBar barThickness;
+        private System.Windows.Forms.Label label5;
     }
 }
 
