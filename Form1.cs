@@ -31,17 +31,17 @@ namespace FractalsPlotter
         public void DrawFractal_Click(object sender, EventArgs e)
         {
             InitTurtle();
-            segment = barFractalHeight.Value / (segmentsLength(barIteration.Value));
+            segment = trackBarFractalHeight.Value / (segmentsLength(trackBarIteration.Value));
             if (comboBoxFractalChoice.Text == "Кривая Коха")
             {
                 InitTurtleKochCurve();
-                DrawKochCurve(barIteration.Value);
+                DrawKochCurve(trackBarIteration.Value);
             }
             if (comboBoxFractalChoice.Text == "Снежинка Коха")
             {
                 segment /= 2;
                 InitTurtleKochSnowFlake();
-                DrawKochSnowFlake(barIteration.Value);
+                DrawKochSnowFlake(trackBarIteration.Value);
             }
         }
         
@@ -51,24 +51,24 @@ namespace FractalsPlotter
 
         public void InitTurtle()
         {
-            Turtle.Delay = 1100 / barSpeed.Value;
+            Turtle.Delay = 1100 / trackBarSpeed.Value;
             Turtle.Reset();
             Turtle.Init(pnCanvas);
             Turtle.ShowTurtle = false;
-            Turtle.PenSize = barThickness.Value;
+            Turtle.PenSize = trackBarThickness.Value;
             Turtle.PenUp();
             // Turtle will look to the right
         }
 
         public void InitTurtleKochSnowFlake()
         {
-            Turtle.MoveTo(-barFractalHeight.Value / 4, -barFractalHeight.Value / 4);
+            Turtle.MoveTo(-trackBarFractalHeight.Value / 4, -trackBarFractalHeight.Value / 4);
             Turtle.PenDown();
         }
 
         public void InitTurtleKochCurve()
         {
-            Turtle.MoveTo(-barFractalHeight.Value / 2, 0);
+            Turtle.MoveTo(-trackBarFractalHeight.Value / 2, 0);
             Turtle.Rotate(90);
             Turtle.PenDown();
         }
@@ -80,10 +80,10 @@ namespace FractalsPlotter
 
         public void DrawKochSnowFlake(int n)
         {
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < trackBarSidesCount.Value; i++)
             {
                 snowflakeOneSide(n);
-                Turtle.Rotate(90);
+                Turtle.Rotate(360 / trackBarSidesCount.Value);
             }
         }
 
@@ -102,6 +102,20 @@ namespace FractalsPlotter
                 snowflakeOneSide(n - 1);
                 Turtle.Rotate(-60);
                 snowflakeOneSide(n - 1);
+            }
+        }
+
+        private void comboBoxFractalChoice_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxFractalChoice.Text == "Снежинка Коха")
+            {
+                trackBarSidesCount.Visible = true;
+                labelSidesCount.Visible = true;
+            }
+            else
+            {
+                trackBarSidesCount.Visible = false;
+                labelSidesCount.Visible = false;
             }
         }
     }

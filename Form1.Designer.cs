@@ -31,20 +31,23 @@
             this.pnCanvas = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.barIteration = new System.Windows.Forms.TrackBar();
+            this.trackBarIteration = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
-            this.barFractalHeight = new System.Windows.Forms.TrackBar();
+            this.trackBarFractalHeight = new System.Windows.Forms.TrackBar();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.barSpeed = new System.Windows.Forms.TrackBar();
+            this.trackBarSpeed = new System.Windows.Forms.TrackBar();
             this.label4 = new System.Windows.Forms.Label();
-            this.barThickness = new System.Windows.Forms.TrackBar();
+            this.trackBarThickness = new System.Windows.Forms.TrackBar();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBoxFractalChoice = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.barIteration)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barFractalHeight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barSpeed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barThickness)).BeginInit();
+            this.trackBarSidesCount = new System.Windows.Forms.TrackBar();
+            this.labelSidesCount = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarIteration)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarFractalHeight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarSpeed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarThickness)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarSidesCount)).BeginInit();
             this.SuspendLayout();
             // 
             // pnCanvas
@@ -73,16 +76,16 @@
             this.progressBar1.Size = new System.Drawing.Size(190, 23);
             this.progressBar1.TabIndex = 4;
             // 
-            // barIteration
+            // trackBarIteration
             // 
-            this.barIteration.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.barIteration.Location = new System.Drawing.Point(5, 76);
-            this.barIteration.Minimum = 1;
-            this.barIteration.Name = "barIteration";
-            this.barIteration.Size = new System.Drawing.Size(190, 45);
-            this.barIteration.TabIndex = 5;
-            this.barIteration.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.barIteration.Value = 1;
+            this.trackBarIteration.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.trackBarIteration.Location = new System.Drawing.Point(5, 76);
+            this.trackBarIteration.Minimum = 1;
+            this.trackBarIteration.Name = "trackBarIteration";
+            this.trackBarIteration.Size = new System.Drawing.Size(190, 45);
+            this.trackBarIteration.TabIndex = 5;
+            this.trackBarIteration.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.trackBarIteration.Value = 1;
             // 
             // label1
             // 
@@ -93,22 +96,22 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Выберите количество итераций:";
             // 
-            // barFractalHeight
+            // trackBarFractalHeight
             // 
-            this.barFractalHeight.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.barFractalHeight.Location = new System.Drawing.Point(2, 378);
-            this.barFractalHeight.Maximum = 500;
-            this.barFractalHeight.Minimum = 1;
-            this.barFractalHeight.Name = "barFractalHeight";
-            this.barFractalHeight.Size = new System.Drawing.Size(190, 45);
-            this.barFractalHeight.TabIndex = 5;
-            this.barFractalHeight.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.barFractalHeight.Value = 500;
+            this.trackBarFractalHeight.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.trackBarFractalHeight.Location = new System.Drawing.Point(6, 253);
+            this.trackBarFractalHeight.Maximum = 500;
+            this.trackBarFractalHeight.Minimum = 1;
+            this.trackBarFractalHeight.Name = "trackBarFractalHeight";
+            this.trackBarFractalHeight.Size = new System.Drawing.Size(190, 45);
+            this.trackBarFractalHeight.TabIndex = 5;
+            this.trackBarFractalHeight.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.trackBarFractalHeight.Value = 500;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 362);
+            this.label2.Location = new System.Drawing.Point(17, 237);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(160, 13);
             this.label2.TabIndex = 6;
@@ -123,41 +126,41 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Выберите фрактал для построения";
             // 
-            // barSpeed
+            // trackBarSpeed
             // 
-            this.barSpeed.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.barSpeed.Location = new System.Drawing.Point(5, 255);
-            this.barSpeed.Maximum = 2000;
-            this.barSpeed.Minimum = 1;
-            this.barSpeed.Name = "barSpeed";
-            this.barSpeed.Size = new System.Drawing.Size(190, 45);
-            this.barSpeed.TabIndex = 5;
-            this.barSpeed.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.barSpeed.Value = 20;
+            this.trackBarSpeed.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.trackBarSpeed.Location = new System.Drawing.Point(6, 190);
+            this.trackBarSpeed.Maximum = 2000;
+            this.trackBarSpeed.Minimum = 1;
+            this.trackBarSpeed.Name = "trackBarSpeed";
+            this.trackBarSpeed.Size = new System.Drawing.Size(190, 45);
+            this.trackBarSpeed.TabIndex = 5;
+            this.trackBarSpeed.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.trackBarSpeed.Value = 20;
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(16, 242);
+            this.label4.Location = new System.Drawing.Point(17, 177);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(168, 19);
             this.label4.TabIndex = 6;
             this.label4.Text = "Скорость построения:";
             // 
-            // barThickness
+            // trackBarThickness
             // 
-            this.barThickness.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.barThickness.Location = new System.Drawing.Point(6, 161);
-            this.barThickness.Maximum = 50;
-            this.barThickness.Minimum = 1;
-            this.barThickness.Name = "barThickness";
-            this.barThickness.Size = new System.Drawing.Size(190, 45);
-            this.barThickness.TabIndex = 5;
-            this.barThickness.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.barThickness.Value = 1;
+            this.trackBarThickness.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.trackBarThickness.Location = new System.Drawing.Point(6, 130);
+            this.trackBarThickness.Maximum = 50;
+            this.trackBarThickness.Minimum = 1;
+            this.trackBarThickness.Name = "trackBarThickness";
+            this.trackBarThickness.Size = new System.Drawing.Size(190, 45);
+            this.trackBarThickness.TabIndex = 5;
+            this.trackBarThickness.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.trackBarThickness.Value = 1;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(17, 148);
+            this.label5.Location = new System.Drawing.Point(17, 117);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(168, 19);
             this.label5.TabIndex = 6;
@@ -174,6 +177,29 @@
             this.comboBoxFractalChoice.Size = new System.Drawing.Size(182, 21);
             this.comboBoxFractalChoice.TabIndex = 7;
             this.comboBoxFractalChoice.Text = "Кривая Коха";
+            this.comboBoxFractalChoice.SelectedIndexChanged += new System.EventHandler(this.comboBoxFractalChoice_SelectedIndexChanged);
+            // 
+            // trackBarSidesCount
+            // 
+            this.trackBarSidesCount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.trackBarSidesCount.Location = new System.Drawing.Point(10, 318);
+            this.trackBarSidesCount.Minimum = 2;
+            this.trackBarSidesCount.Name = "trackBarSidesCount";
+            this.trackBarSidesCount.Size = new System.Drawing.Size(190, 45);
+            this.trackBarSidesCount.TabIndex = 5;
+            this.trackBarSidesCount.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.trackBarSidesCount.Value = 4;
+            this.trackBarSidesCount.Visible = false;
+            // 
+            // labelSidesCount
+            // 
+            this.labelSidesCount.AutoSize = true;
+            this.labelSidesCount.Location = new System.Drawing.Point(21, 302);
+            this.labelSidesCount.Name = "labelSidesCount";
+            this.labelSidesCount.Size = new System.Drawing.Size(160, 13);
+            this.labelSidesCount.TabIndex = 6;
+            this.labelSidesCount.Text = "Количество сторон снежинки:";
+            this.labelSidesCount.Visible = false;
             // 
             // Form1
             // 
@@ -183,22 +209,25 @@
             this.Controls.Add(this.comboBoxFractalChoice);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelSidesCount);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pnCanvas);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.barIteration);
+            this.Controls.Add(this.trackBarIteration);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.barThickness);
-            this.Controls.Add(this.barSpeed);
-            this.Controls.Add(this.barFractalHeight);
+            this.Controls.Add(this.trackBarThickness);
+            this.Controls.Add(this.trackBarSpeed);
+            this.Controls.Add(this.trackBarSidesCount);
+            this.Controls.Add(this.trackBarFractalHeight);
             this.Name = "Form1";
-            this.Text = "FractalsPlotter v.0.2";
-            ((System.ComponentModel.ISupportInitialize)(this.barIteration)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barFractalHeight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barSpeed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barThickness)).EndInit();
+            this.Text = "FractalsPlotter v.0.2.5";
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarIteration)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarFractalHeight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarSpeed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarThickness)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarSidesCount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,16 +238,18 @@
         private System.Windows.Forms.Panel pnCanvas;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.TrackBar barIteration;
+        private System.Windows.Forms.TrackBar trackBarIteration;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TrackBar barFractalHeight;
+        private System.Windows.Forms.TrackBar trackBarFractalHeight;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TrackBar barSpeed;
+        private System.Windows.Forms.TrackBar trackBarSpeed;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TrackBar barThickness;
+        private System.Windows.Forms.TrackBar trackBarThickness;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBoxFractalChoice;
+        private System.Windows.Forms.TrackBar trackBarSidesCount;
+        private System.Windows.Forms.Label labelSidesCount;
     }
 }
 
