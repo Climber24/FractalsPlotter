@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pnCanvas = new System.Windows.Forms.Panel();
             this.buttonDrawFractal = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
@@ -140,7 +141,7 @@
             this.trackBarSpeed.Size = new System.Drawing.Size(190, 45);
             this.trackBarSpeed.TabIndex = 5;
             this.trackBarSpeed.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.trackBarSpeed.Value = 20;
+            this.trackBarSpeed.Value = 40;
             // 
             // label4
             // 
@@ -193,7 +194,7 @@
             this.trackBarSidesCount.Name = "trackBarSidesCount";
             this.trackBarSidesCount.Size = new System.Drawing.Size(190, 45);
             this.trackBarSidesCount.TabIndex = 5;
-            this.trackBarSidesCount.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.trackBarSidesCount.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackBarSidesCount.Value = 4;
             this.trackBarSidesCount.Visible = false;
             // 
@@ -262,6 +263,7 @@
             this.Controls.Add(this.trackBarSpeed);
             this.Controls.Add(this.trackBarSidesCount);
             this.Controls.Add(this.trackBarFractalHeight);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "FractalsPlotter v.0.2.6";
             ((System.ComponentModel.ISupportInitialize)(this.trackBarIteration)).EndInit();
