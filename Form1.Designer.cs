@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.pnCanvas = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonDrawFractal = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.trackBarIteration = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,11 +43,15 @@
             this.comboBoxFractalChoice = new System.Windows.Forms.ComboBox();
             this.trackBarSidesCount = new System.Windows.Forms.TrackBar();
             this.labelSidesCount = new System.Windows.Forms.Label();
+            this.FractalPictureBox = new System.Windows.Forms.PictureBox();
+            this.buttonInterruptDrawing = new System.Windows.Forms.Button();
+            this.buttonAbout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarIteration)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFractalHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarThickness)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarSidesCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FractalPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // pnCanvas
@@ -58,16 +62,16 @@
             this.pnCanvas.Size = new System.Drawing.Size(500, 500);
             this.pnCanvas.TabIndex = 1;
             // 
-            // button1
+            // buttonDrawFractal
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(5, 448);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(191, 34);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Построить выбранный фрактал";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.DrawFractal_Click);
+            this.buttonDrawFractal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDrawFractal.Location = new System.Drawing.Point(5, 412);
+            this.buttonDrawFractal.Name = "buttonDrawFractal";
+            this.buttonDrawFractal.Size = new System.Drawing.Size(191, 34);
+            this.buttonDrawFractal.TabIndex = 2;
+            this.buttonDrawFractal.Text = "Построить выбранный фрактал";
+            this.buttonDrawFractal.UseVisualStyleBackColor = true;
+            this.buttonDrawFractal.Click += new System.EventHandler(this.DrawFractal_Click);
             // 
             // progressBar1
             // 
@@ -171,7 +175,9 @@
             this.comboBoxFractalChoice.FormattingEnabled = true;
             this.comboBoxFractalChoice.Items.AddRange(new object[] {
             "Кривая Коха",
-            "Снежинка Коха"});
+            "Снежинка Коха",
+            "Треугольник Серпинского",
+            "Ковёр Серпинского"});
             this.comboBoxFractalChoice.Location = new System.Drawing.Point(10, 26);
             this.comboBoxFractalChoice.Name = "comboBoxFractalChoice";
             this.comboBoxFractalChoice.Size = new System.Drawing.Size(182, 21);
@@ -201,11 +207,44 @@
             this.labelSidesCount.Text = "Количество сторон снежинки:";
             this.labelSidesCount.Visible = false;
             // 
+            // FractalPictureBox
+            // 
+            this.FractalPictureBox.Location = new System.Drawing.Point(207, 12);
+            this.FractalPictureBox.Name = "FractalPictureBox";
+            this.FractalPictureBox.Size = new System.Drawing.Size(500, 500);
+            this.FractalPictureBox.TabIndex = 8;
+            this.FractalPictureBox.TabStop = false;
+            this.FractalPictureBox.Visible = false;
+            // 
+            // buttonInterruptDrawing
+            // 
+            this.buttonInterruptDrawing.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonInterruptDrawing.Location = new System.Drawing.Point(5, 450);
+            this.buttonInterruptDrawing.Name = "buttonInterruptDrawing";
+            this.buttonInterruptDrawing.Size = new System.Drawing.Size(191, 34);
+            this.buttonInterruptDrawing.TabIndex = 2;
+            this.buttonInterruptDrawing.Text = "Прервать построение";
+            this.buttonInterruptDrawing.UseVisualStyleBackColor = true;
+            // 
+            // buttonAbout
+            // 
+            this.buttonAbout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAbout.Location = new System.Drawing.Point(5, 374);
+            this.buttonAbout.Name = "buttonAbout";
+            this.buttonAbout.Size = new System.Drawing.Size(191, 34);
+            this.buttonAbout.TabIndex = 2;
+            this.buttonAbout.Text = "О программе";
+            this.buttonAbout.UseVisualStyleBackColor = true;
+            this.buttonAbout.Click += new System.EventHandler(this.buttonAbout_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 520);
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(736, 520);
+            this.Controls.Add(this.FractalPictureBox);
             this.Controls.Add(this.comboBoxFractalChoice);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -214,7 +253,9 @@
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pnCanvas);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonInterruptDrawing);
+            this.Controls.Add(this.buttonAbout);
+            this.Controls.Add(this.buttonDrawFractal);
             this.Controls.Add(this.trackBarIteration);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.trackBarThickness);
@@ -222,12 +263,13 @@
             this.Controls.Add(this.trackBarSidesCount);
             this.Controls.Add(this.trackBarFractalHeight);
             this.Name = "Form1";
-            this.Text = "FractalsPlotter v.0.2.5";
+            this.Text = "FractalsPlotter v.0.2.6";
             ((System.ComponentModel.ISupportInitialize)(this.trackBarIteration)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarFractalHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarThickness)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarSidesCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FractalPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,7 +278,7 @@
         #endregion
 
         private System.Windows.Forms.Panel pnCanvas;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonDrawFractal;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.TrackBar trackBarIteration;
         private System.Windows.Forms.Label label1;
@@ -250,6 +292,9 @@
         private System.Windows.Forms.ComboBox comboBoxFractalChoice;
         private System.Windows.Forms.TrackBar trackBarSidesCount;
         private System.Windows.Forms.Label labelSidesCount;
+        private System.Windows.Forms.PictureBox FractalPictureBox;
+        private System.Windows.Forms.Button buttonInterruptDrawing;
+        private System.Windows.Forms.Button buttonAbout;
     }
 }
 
